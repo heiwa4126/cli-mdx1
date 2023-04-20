@@ -47,3 +47,9 @@ compile & runにするべき。
 
 .mdx中のJavaScriptはハイライトも補完も効かないので間違えやすい。
 なんとかならんのか。
+
+Next.js 中でMDX使うなら以下参照
+
+* [Advanced Features: Using MDX \| Next\.js](https://nextjs.org/docs/advanced-features/using-mdx)
+* [Markdown and MDX | Next.js](https://beta.nextjs.org/docs/guides/mdx#mdx)
+* [next-mdx-remote - npm](https://www.npmjs.com/package/next-mdx-remote)
