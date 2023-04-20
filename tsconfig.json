@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "CommonJS",
+    "module": "es2020",
+    "target": "es2020",
     "declaration": false,
-    "sourceMap": false,
+    "sourceMap": true,
     "esModuleInterop": false,
     "outDir": "./dist",
     "strict": true,

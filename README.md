@@ -1,45 +1,49 @@
-# typescript-hello-template
+# cli-mdx1
 
-TypeScriptでちょっと簡単なコードを書く時のテンプレート。
-こんなのでも何回も書いてるような気がしてきたので。
+.mdxファイルを
+JSX.Elementに変換して、
+それをHTMLとして表示する
+TypeScriptのCLIサンプル。
 
-## 仕様
-
-- TypeScript 5
-- pnpm 使用
-- src/の下に書いて、dist/の下にCommonJSが出る
-
-## 使い方
-
-git cloneして
-```bash
-rm -rf .git
-git init
-pnpm up
-```
-で準備。
-
-package.jsonをエディタで開いて
-`typescript-hello-template` を自分のプロジェクト名に置換。
+## 実行
 
 ```bash
+pnpm i
 pnpm build
+pnpm start
+```
+
+## 開発
+
+```bash
+pnpm watch
+```
+で、ソースを書き換えて
+
+```bash
 pnpm start
 ```
 で実行。
 
-開発時は
-```bash
-pnpm watch
-```
-しておいて、
 
-1. `src/`以下を修正
-1. `pnpm start` で実行。
+## 参考
 
-を繰り返す。
+- [Using MDX \| MDX](https://mdxjs.com/docs/using-mdx/)
+- [@mdx\-js/mdx \| MDX](https://mdxjs.com/packages/mdx/) - compile()を使った例が載ってる。あとでremarkPluginsを入れてみる。
+
 
 ## TODO
 
-- esbuildにする。
-- `pnpm create ...` で出来るようになりたい。
+ここがキモい。たぶんオプションの使い方が間違ってるのでなんとかする。
+```TypeScript
+import { RunnerOptions } from "@mdx-js/mdx/lib/util/resolve-evaluate-options.js";
+```
+
+[compile()](https://mdxjs.com/packages/mdx/#compilefile-options)のほうがオプションが多い感じ。
+compile & runにするべき。
+
+
+## メモ
+
+.mdx中のJavaScriptはハイライトも補完も効かないので間違えやすい。
+なんとかならんのか。

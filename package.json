@@ -1,8 +1,9 @@
 {
-  "name": "typescript-hello-template",
-  "module": "common",
+  "name": "mdx1",
+  "type": "module",
+  "module": "dist/index.js",
   "version": "1.0.0",
-  "description": "a exmaple code in typescript",
+  "description": "a exmaple code for MDX",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -13,13 +14,20 @@
   "author": "me@example.com",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18",
-    "typescript": "5"
+    "@types/node": "^18.15.12",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^5.0.4"
   },
   "files": [
     "dist/"
   ],
   "bin": {
-    "typescript-hello-template": "./dist/index.js"
+    "mdx1": "./dist/index.js"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^2.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
